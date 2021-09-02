@@ -7,34 +7,63 @@
     <title>Book Library</title>
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- CSS PART -->
+    <style>
+        /* spinner style  */
+    #spinner {
+    display: none;
+         }
+         body{
+        background: url("img/bg.jpg");
+        background-size: cover;
+        
+    } 
+    </style>
 </head>
 <body>
+    <header>
+        <h1 class="text-center text-dark mt-4 mb-0"> International Online  Book Store</h1>
+    </header>
+    <main>
     <!-- book search-field -->
 	<div class="container">
         <div class="col-md-6 m-auto py-5">
-            <div class="input-group mb-3">
+            <div class="input-group mb-0">
                 <input
                     id="search-field"
                     type="text"
                     class="form-control"
                     placeholder="Enter your book Name..."
                     />
-                <div class="input-group-append">
+                    <div class="input-group-append">
                     <button onclick="searchBook()" type="button" class="btn btn-danger">
                         Search
                     </button>
                 </div>
             </div>
         </div>
-      <!-- book serach-result  -->
-      <div id="display-result" class="row row-cols-1 row-cols-md-3 g-4">
-       <div class="col">
-    </div>
-     </div>
+        <!--  for spinner part  -->
+        <div id="spinner" class="spinner-border mx-auto my-2" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+          <!--  for Total search results  -->
+          <div id="search-result" class="w-50 mx-auto">
 
+        </div>
+        <!--  for error showing area -->
+		<div id="display_error" class="text-center">
+
+        </div>
+
+      <!--  for book serach-result  -->
+        <div id="final-result" class="container">
+       <div id="display-result" class="row row-cols-1 row-cols-md-4 g-5"></div>
+        </div>
+    </main>
+    
     <!-- boostrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- javascript -->
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
